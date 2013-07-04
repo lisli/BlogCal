@@ -36,3 +36,34 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use debugger
 # gem 'debugger'
+
+group :development do
+  gem 'wirble'
+  gem 'hirb'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+  gem "letter_opener"
+end
+
+group :test, :development do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'faker'
+  gem 'factory_girl_rails'
+  gem 'spork'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'shoulda-matchers'
+  gem 'validates_existence', '>= 0.4'
+  gem 'database_cleaner'
+  gem 'rb-fsevent'
+  gem 'poltergeist'
+  gem 'acts_as_fu'
+  gem "show_me_the_cookies"
+  gem 'simplecov', :require => false
+end
