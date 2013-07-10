@@ -1,6 +1,21 @@
 BlogCal::Application.routes.draw do
+  
+
+  resources :blogs
+
   resources :users
   resources :sessions
+
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
+  %w[home about].each do |page|
+    get page, controller: 'info', action: page
+  end
+
+
+  root to: 'info#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
