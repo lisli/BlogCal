@@ -1,6 +1,8 @@
 BlogCal::Application.routes.draw do
   
 
+  resources :posts
+
   resources :blogs
 
   resources :users
