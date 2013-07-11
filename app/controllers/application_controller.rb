@@ -10,4 +10,6 @@ private
 
     def authorize
         redirect_to login_url, alert: "You're not logged in!" if current_user.nil?
+    end
+
 end
